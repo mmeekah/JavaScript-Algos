@@ -28,3 +28,16 @@ console.log(result2);
 //Summing Numbers!: 4
 //num2 is: 7
 //11
+
+function highFive(num){
+    for(var i=0; i<num; i++){
+        if(i == 5){
+            console.log("High Five!");
+        }
+        else{
+            console.log(i);
+        }
+    }
+}
+
+//nothing, function is not called
