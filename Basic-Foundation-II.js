@@ -145,7 +145,7 @@ var x = ["hello","dojo","awesome"];
 console.log(previousLengths(x));
 
 //9
-function addSeven(){
+function addSeven(arr){
     var newArr=[];
     for(var i=1; i<arr.length; i++){
         newArr.push(arr[i]+7);
