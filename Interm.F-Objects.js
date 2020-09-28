@@ -66,3 +66,88 @@ console.log(fibonacci(7))
 //
 
 
+
+//Array: Second-to-Last:
+
+function SecondToLast(arr){
+    
+
+    console.log(arr[arr.length-2])
+    // return arr[arr.length-2]
+
+    if(arr.lenth=0){
+        return null
+    }
+    
+}
+
+
+console.log(SecondToLast( [42, true, 4, "Liam", 7]))
+
+
+//Array: Nth-to-Last: 
+
+function arrayNthToLast(arr, num) {
+    // Check array length
+    if(arr.length < num){
+      return null;
+    }
+  
+    console.log(arr[arr.length - num]);
+  
+}
+
+var arr1 = [5,2,3,6,4,9,7];
+var num1 = 3;
+arrayNthToLast(arr1, num1);
+
+
+//
+
+function arraySecondLargest(arr) {
+    var max = arr[0];
+    var almostMax = arr[0];
+  
+    //check array length
+    if(arr.length < 2){
+      return null;
+    }
+  
+    //find max
+    for(var i = 0; i < arr.length; i ++){
+      if(arr[i] > max){
+        max = arr[i]
+      }
+    }
+  
+    for(var i = 0; i <arr.length; i ++){
+      if(arr[i] > almostMax && arr[i] < max){
+        almostMax = arr[i];
+      }
+    }
+  
+    console.log(almostMax);
+  }
+  
+  var arr1 = [1,2,3,4,5,6,7,8,9];
+  arraySecondLargest(arr1);
+  
+  var arr1 = [42,1,4,Math.PI,7];
+  arraySecondLargest(arr1);
+  
+  
+
+  //Double Trouble
+
+function doubleTrouble(arr) {
+    for (let i = 0; i < arr.length; i += 2) {
+        for (let j = arr.length - 1; j > i; j--) {
+            arr[j + 1] = arr[j];
+        }
+        arr[i + 1] = arr[i];
+    }
+    return arr;
+}
+
+let myArr = [4, "Ulysses", 42, false];
+console.log(doubleTrouble(myArr));
